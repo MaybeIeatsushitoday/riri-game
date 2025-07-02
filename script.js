@@ -11,7 +11,7 @@ const gameContainer = document.getElementById('game-container');
 const story = [
     {
         dialogue: "ねえ、おぢ。りりと一緒にいてくれる？",
-        image: "a7e36bc2a222cf062a1dc3bf5c05b4ddfa50b12d.png",
+        image: "22f611dada3b0420027137446501a0546bde0b4b.webp",
         choices: [
             { text: "もちろん！", next: 1 },
             { text: "ごめん、ちょっと…", next: 2 }
@@ -19,12 +19,12 @@ const story = [
     },
     {
         dialogue: "ほんと！？嬉しい！おぢ、だーいすき！",
-        image: "ace5c284f8ac58278376423df4cf57bfff0d8836.webp",
+        image: "3066e4c08e0ab77bd6112c159f6ab9122cbd586f.webp",
         choices: []
     },
     {
         dialogue: "そっか…。おぢは、りりのこと嫌いなんだ…。",
-        image: "f9ebdfd8f042fe822fc2b6c86b140e0f7d11e719.webp",
+        image: "1c8fcc071d2a19912e267ec353c79cc6cc8ab500.webp",
         choices: []
     }
 ];
@@ -44,7 +44,8 @@ function showStory(index) {
         button.textContent = choice.text;
         button.addEventListener('click', () => {
             if (choice.text === "もちろん！") {
-                bgm.play();
+                const audio = new Audio('extracted_audio_trimmed.mp3');
+                audio.play();
             }
             currentStoryIndex = choice.next;
             showStory(currentStoryIndex);
