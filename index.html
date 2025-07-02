@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
+    <div id="start-container">
+        <button id="start-button" class="choice-button">ゲームをはじめる</button>
+    </div>
+    <div id="game-container" style="display: none;">
         <div id="character-container">
             <img id="character-image" src="a7e36bc2a222cf062a1dc3bf5c05b4ddfa50b12d.png" alt="りり">
         </div>
         <div id="text-container">
-            <p id="dialogue">ゲームへようこそ！</p>
+            <p id="dialogue"></p>
         </div>
         <div id="choices-container">
             <!-- 選択肢はここに動的に追加されます -->
