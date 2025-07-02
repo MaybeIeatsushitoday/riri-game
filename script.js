@@ -1,4 +1,5 @@
 
+
 const dialogueElement = document.getElementById('dialogue');
 const choicesContainer = document.getElementById('choices-container');
 const characterImage = document.getElementById('character-image');
@@ -42,7 +43,7 @@ function showStory(index) {
         button.classList.add('choice-button');
         button.textContent = choice.text;
         button.addEventListener('click', () => {
-            if (choice.text === "もちろん!") {
+            if (choice.text === "もちろん！") {
                 bgm.play();
             }
             currentStoryIndex = choice.next;
@@ -57,3 +58,5 @@ startButton.addEventListener('click', () => {
     gameContainer.style.display = 'block';
     showStory(currentStoryIndex);
 });
+
+
