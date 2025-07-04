@@ -1,8 +1,10 @@
-
 const dialogueElement = document.getElementById('dialogue');
 const choicesContainer = document.getElementById('choices-container');
-const bgm = document.getElementById('bgm');
 const characterImage = document.getElementById('character-image');
+const bgm = document.getElementById('bgm');
+const startButton = document.getElementById('start-button');
+const startContainer = document.getElementById('start-container');
+const gameContainer = document.getElementById('game-container');
 
 const story = [
     // 第1章：邂逅
@@ -131,4 +133,8 @@ function showStory(index) {
     }
 }
 
-showStory(currentStoryIndex);
+startButton.addEventListener('click', () => {
+    startContainer.style.display = 'none';
+    gameContainer.style.display = 'block';
+    showStory(currentStoryIndex);
+});
